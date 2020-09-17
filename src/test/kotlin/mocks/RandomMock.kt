@@ -1,8 +1,8 @@
 package mocks
 
-import java.util.Random
+import java.util.*
 
-class RandomMock: Random() {
+class RandomMock : Random() {
 
     private var currentRandomNumber = -1
 
