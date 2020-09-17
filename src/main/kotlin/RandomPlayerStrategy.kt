@@ -1,0 +1,2 @@
+class RandomPlayerStrategy: PlayerStrategy {
+}
