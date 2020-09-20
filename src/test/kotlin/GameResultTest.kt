@@ -1,3 +1,5 @@
+import enums.Move
+import enums.Result
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.DynamicTest
 import org.junit.jupiter.api.Test

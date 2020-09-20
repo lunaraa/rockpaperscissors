@@ -1,3 +1,4 @@
+import enums.Move
 import mocks.MockPlayerStrategy
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test

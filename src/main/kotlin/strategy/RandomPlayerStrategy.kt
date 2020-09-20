@@ -1,6 +1,6 @@
 package strategy
 
-import Move
+import enums.Move
 import java.util.*
 
 class RandomPlayerStrategy(private val random: Random) : PlayerStrategy {

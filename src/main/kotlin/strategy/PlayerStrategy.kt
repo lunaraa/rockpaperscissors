@@ -1,6 +1,6 @@
 package strategy
 
-import Move
+import enums.Move
 
 interface PlayerStrategy {
 

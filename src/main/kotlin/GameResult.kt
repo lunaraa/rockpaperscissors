@@ -1,3 +1,6 @@
+import enums.Move
+import enums.Result
+
 class GameResult(val roundResults: List<RoundResult>) {
 
     val firstPlayerWins = roundResults.count { it.result == Result.WIN }
