@@ -24,7 +24,7 @@ class PlayerStrategyTest {
         val expectedMoves = Move.values().asList()
 
         // when
-        val moves = Array(NUMBER_OF_MOVES) { randomStrategy.chooseMove() }.asList()
+        val moves = Array(Move.values().size) { randomStrategy.chooseMove() }.asList()
 
         // then
         Assertions.assertEquals(expectedMoves, moves)
