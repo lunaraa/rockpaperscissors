@@ -1,6 +1,6 @@
 package enums
 
-enum class Move {
+enum class Move(val value: Int) {
 
-    ROCK, PAPER, SCISSORS
+    ROCK(0), PAPER(1), SCISSORS(2)
 }

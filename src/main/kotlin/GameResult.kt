@@ -29,11 +29,9 @@ class RoundResult(
 
     val result = when {
         moves.first == moves.second -> Result.DRAW
-        (getIndexForMove(moves.first) - getIndexForMove(moves.second) + 3) % 3 == 1 -> Result.WIN
+        (moves.first.value - moves.second.value + 3) % 3 == 1 -> Result.WIN
         else -> Result.LOSS
     }
-
-    private fun getIndexForMove(move: Move) = Move.values().indexOf(move)
 
     override fun toString(): String {
         return StringBuilder()
