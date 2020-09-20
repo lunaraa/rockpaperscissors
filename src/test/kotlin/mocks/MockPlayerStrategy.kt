@@ -1,7 +1,7 @@
 package mocks
 
 import Move
-import PlayerStrategy
+import strategy.PlayerStrategy
 
 class MockPlayerStrategy(private val moveToMake: Move) : PlayerStrategy {
 

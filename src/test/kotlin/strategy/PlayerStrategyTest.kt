@@ -1,3 +1,6 @@
+package strategy
+
+import Move
 import mocks.RandomMock
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test

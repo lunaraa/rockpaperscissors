@@ -1,3 +1,5 @@
+import strategy.RandomPlayerStrategy
+import strategy.RockPlayerStrategy
 import java.util.*
 
 fun main() {
