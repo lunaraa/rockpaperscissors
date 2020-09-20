@@ -10,17 +10,19 @@ class GameResult(val roundResults: List<RoundResult>) {
         return StringBuilder().apply {
             roundResults.forEach { this.append(it) }
             this.appendLine("-------------------------------------")
-            this.appendLine("After ${roundResults.size} rounds the statistics are:")
+            this.appendLine("After ${roundResults.size} round(s) the statistics are:")
             this.appendLine("-------------------------------------")
-            this.appendLine("First player won $firstPlayerWins times.")
-            this.appendLine("Second player won $secondPlayerWins times.")
-            this.appendLine("There were $draws draws.")
+            this.appendLine("First player wins: $firstPlayerWins.")
+            this.appendLine("Second player wins: $secondPlayerWins.")
+            this.appendLine("Draws: $draws.")
         }.toString()
     }
 }
 
-class RoundResult(private val roundNumber: Int,
-                  private val moves: Pair<Move, Move>) {
+class RoundResult(
+    private val roundNumber: Int,
+    private val moves: Pair<Move, Move>
+) {
 
     val result = when {
         moves.first == moves.second -> Result.DRAW
@@ -32,13 +34,13 @@ class RoundResult(private val roundNumber: Int,
 
     override fun toString(): String {
         return StringBuilder()
-                .appendLine("-------------------------------------")
-                .appendLine("Round $roundNumber")
-                .appendLine("-------------------------------------")
-                .appendLine("First player chooses move: ${moves.first}.")
-                .appendLine("Second player chooses move: ${moves.second}.")
-                .appendLine("The result for the first player is: $result.")
-                .appendLine()
-                .toString()
+            .appendLine("-------------------------------------")
+            .appendLine("Round $roundNumber")
+            .appendLine("-------------------------------------")
+            .appendLine("First player chooses move: ${moves.first}.")
+            .appendLine("Second player chooses move: ${moves.second}.")
+            .appendLine("The result for the first player is: $result.")
+            .appendLine()
+            .toString()
     }
 }

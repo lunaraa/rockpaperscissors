@@ -67,4 +67,34 @@ class GameResultTest {
         Assertions.assertEquals(0, gameResult.secondPlayerWins)
         Assertions.assertEquals(1, gameResult.draws)
     }
+
+    @Test
+    fun `toString includes all parameters for RoundResult`() {
+        // given
+        val roundResult = RoundResult(1, Move.ROCK to Move.SCISSORS)
+        val expectedFragments = listOf("Round 1", Move.ROCK.toString(), Move.SCISSORS.toString(), Result.WIN.toString())
+
+        // when
+        val actual = roundResult.toString()
+
+        // then
+        expectedFragments.forEach {
+            Assertions.assertTrue(actual.contains(it))
+        }
+    }
+
+    @Test
+    fun `toString includes all parameters for GameResult`() {
+        // given
+        val gameResult = GameResult(listOf(RoundResult(1, Move.ROCK to Move.SCISSORS)))
+        val expectedFragments = listOf("Round 1", Move.ROCK.toString(), Move.SCISSORS.toString(), Result.WIN.toString(), "1 round(s)", "First player wins: 1.", "Second player wins: 0.", "Draws: 0")
+
+        // when
+        val actual = gameResult.toString()
+
+        // then
+        expectedFragments.forEach {
+            Assertions.assertTrue(actual.contains(it))
+        }
+    }
 }
