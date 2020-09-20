@@ -1,5 +1,6 @@
 import strategy.RandomPlayerStrategy
 import strategy.RockPlayerStrategy
+import java.io.File
 import java.util.*
 
 fun main() {
@@ -7,5 +8,5 @@ fun main() {
     val secondPlayer = Player(RockPlayerStrategy())
     val result = Game(firstPlayer, secondPlayer, 100).play()
 
-    println(result)
+    File("rpsResult").bufferedWriter().use { out -> out.write(result.toString()) }
 }
